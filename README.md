@@ -105,6 +105,29 @@ veya
 http://localhost:5119/swagger
 ```
 
+## Docker ile Çalıştırma
+
+Docker ile tek komutta çalıştırmak için:
+
+```bash
+docker compose up --build
+```
+
+Swagger arayüzü:
+
+```text
+http://localhost:8080/swagger
+```
+
+Finnhub API key kullanmak için önce environment variable verin:
+
+```powershell
+$env:FINNHUB_API_KEY="your-api-key"
+docker compose up --build
+```
+
+Docker Compose, SQLite veritabanını `stock-data` volume içinde saklar. Böylece container yeniden oluşturulsa bile veriler korunabilir.
+
 ## Endpoint Listesi
 
 ### Tüm hisseleri getir
